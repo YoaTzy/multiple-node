@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # Fungsi untuk meminta input dari pengguna
 echo "Masukkan nilai bandwidth download (dalam MB):"
 read -r BANDWIDTH_DOWNLOAD_MB
