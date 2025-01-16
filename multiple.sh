@@ -5,10 +5,12 @@ echo "Masukkan nilai bandwidth download (dalam MB):"
 read -r BANDWIDTH_DOWNLOAD
 echo "Masukkan nilai bandwidth upload (dalam MB):"
 read -r BANDWIDTH_UPLOAD
-echo "Masukkan PIN (4-6 digit):"
+echo "Masukkan PIN (6 digit):"
 read -r PIN
 echo "Masukkan storage yang akan digunakan (dalam MB):"
 read -r STORAGE
+echo "Masukkan identifier (string unik):"
+read -r IDENTIFIER
 
 # Variabel untuk konfigurasi lainnya
 URL="https://cdn.app.multiple.cc/client/linux/x64/multipleforlinux.tar"
@@ -39,12 +41,7 @@ chmod -R 777 .
 nohup ./multiple-node > "$LOG_FILE" 2>&1 &
 
 # Jalankan multiple-cli dengan parameter yang dimasukkan pengguna
-./multiple-cli bind \
-    --bandwidth-download "$BANDWIDTH_DOWNLOAD" \
-    --bandwidth-upload "$BANDWIDTH_UPLOAD" \
-    --identifier "69NKK121" \
-    --pin "$PIN" \
-    --storage "$STORAGE"
+./multiple-cli bind --bandwidth-download "$BANDWIDTH_DOWNLOAD" --bandwidth-upload "$BANDWIDTH_UPLOAD" --identifier "$IDENTIFIER" --pin "$PIN" --storage "$STORAGE"
 
 # Informasi sukses
 echo "Script selesai dijalankan. Node berjalan di latar belakang."
