@@ -1,21 +1,21 @@
 #!/bin/bash
 
 # Fungsi untuk meminta input dari pengguna
-echo "Masukkan nilai bandwidth download (dalam GB):"
-read -r BANDWIDTH_DOWNLOAD_GB
-echo "Masukkan nilai bandwidth upload (dalam GB):"
-read -r BANDWIDTH_UPLOAD_GB
+echo "Masukkan nilai bandwidth download (dalam MB):"
+read -r BANDWIDTH_DOWNLOAD_MB
+echo "Masukkan nilai bandwidth upload (dalam MB):"
+read -r BANDWIDTH_UPLOAD_MB
 echo "Masukkan PIN (6 digit):"
 read -r PIN
-echo "Masukkan storage yang akan digunakan (dalam GB):"
-read -r STORAGE_GB
+echo "Masukkan storage yang akan digunakan (dalam MB):"
+read -r STORAGE_MB
 echo "Masukkan identifier (string unik):"
 read -r IDENTIFIER
 
-# Konversi nilai input dari GB ke KB
-BANDWIDTH_DOWNLOAD=$((BANDWIDTH_DOWNLOAD_GB * 1024 * 1024))
-BANDWIDTH_UPLOAD=$((BANDWIDTH_UPLOAD_GB * 1024 * 1024))
-STORAGE=$((STORAGE_GB * 1024 * 1024))
+# Konversi nilai input dari MB ke KB
+BANDWIDTH_DOWNLOAD=$((BANDWIDTH_DOWNLOAD_MB * 1024))
+BANDWIDTH_UPLOAD=$((BANDWIDTH_UPLOAD_MB * 1024))
+STORAGE=$((STORAGE_MB * 1024))
 
 # Variabel untuk konfigurasi lainnya
 URL="https://cdn.app.multiple.cc/client/linux/x64/multipleforlinux.tar"
