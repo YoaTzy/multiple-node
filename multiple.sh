@@ -20,7 +20,7 @@ BANDWIDTH_UPLOAD=$((BANDWIDTH_UPLOAD_MB * 1024))
 STORAGE=$((STORAGE_MB * 1024))
 
 # Variabel untuk konfigurasi lainnya
-URL="https://cdn.app.multiple.cc/client/linux/x64/multipleforlinux.tar"
+URL="https://mdeck-download.s3.us-east-1.amazonaws.com/client/linux/x64/multipleforlinux.tar"
 TAR_FILE="multipleforlinux.tar"
 DIR_NAME="multipleforlinux"
 LOG_FILE="output.log"
